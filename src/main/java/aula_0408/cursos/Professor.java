@@ -3,10 +3,10 @@ package aula_0408.cursos;
 public class Professor {
 
     private String nome;
-
     private String rg;
 
-    public Professor() { }
+    public Professor() {
+    }
 
     public Professor(String nome, String rg) {
         this.nome = nome;
@@ -30,8 +30,7 @@ public class Professor {
     }
 
     @Override
-    public String toString(){
-        return nome + " " + rg;
+    public String toString() {
+        return "{" + nome + " " + rg + "}";
     }
 }
-

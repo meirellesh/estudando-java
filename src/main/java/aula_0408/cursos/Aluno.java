@@ -1,12 +1,11 @@
 package aula_0408.cursos;
 
+import java.util.List;
+
 public class Aluno {
 
     private String nome;
-
     private String matricula;
-
-    private Endereco endereco;
 
     public Aluno() {
     }
@@ -15,7 +14,6 @@ public class Aluno {
         this.nome = nome;
         this.matricula = matricula;
     }
-
 
     public String getNome() {
         return nome;
@@ -34,8 +32,7 @@ public class Aluno {
     }
 
     @Override
-    public String toString(){
-        return nome + " " + matricula;
+    public String toString() {
+        return  "{" + nome + " " + matricula + "}";
     }
-
 }

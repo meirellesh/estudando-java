@@ -6,10 +6,27 @@ import java.util.List;
 public class Venda {
 
     private LocalDate dataRegistro;
+
     private String cliente;
 
     private List<String> produtos;
+
     private Double precoTotal;
+
+    public Venda() { }
+
+    public Venda(LocalDate dataRegistro) {
+        setDataRegistro(dataRegistro);
+    }
+
+    public Venda(String cliente) {
+        setCliente(cliente);
+    }
+
+    public Venda(String cliente, LocalDate dataRegistro) {
+        setCliente(cliente);
+        setDataRegistro(dataRegistro);
+    }
 
     public Venda(LocalDate dataRegistro, String cliente, List<String> produtos, Double precoTotal) {
         setDataRegistro(dataRegistro);
@@ -18,23 +35,9 @@ public class Venda {
         setPrecoTotal(precoTotal);
     }
 
-    public Venda(LocalDate dateRegistro) {
-
-    }
-
-    public Venda(LocalDate dateRegistro, String cliente) {
-
-    }
-
-    public Venda() {
-
-    }
-
-
     public LocalDate getDataRegistro() {
         return dataRegistro;
     }
-
 
     public void setDataRegistro(LocalDate dataRegistro) {
         this.dataRegistro = dataRegistro;
@@ -64,13 +67,8 @@ public class Venda {
         this.precoTotal = precoTotal;
     }
 
-    @Override
+    @Override // annotation (anotação) -> Indica uma sobrescrita de método
     public String toString() {
-        return "Venda{" +
-                "dataRegistro=" + dataRegistro +
-                ", cliente='" + cliente + '\'' +
-                ", produtos=" + produtos +
-                ", precoTotal=" + precoTotal +
-                '}';
+        return "Venda { " + cliente + " " + dataRegistro + " " + produtos + " " + precoTotal + " }";
     }
 }

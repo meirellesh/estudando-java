@@ -3,16 +3,15 @@ package aula_0408.cursos;
 import java.util.List;
 
 public class Curso {
+    // Composição de Objetos -> Representação de Objetos dentro de outros Objetos
 
     private String nome;
-
     private Float cargaHoraria;
-
     private Professor professor;
-
     private List<Aluno> alunos;
 
-    public Curso() {    }
+    public Curso() {
+    }
 
     public Curso(String nome, Float cargaHoraria, Professor professor, List<Aluno> alunos) {
         this.nome = nome;
@@ -54,7 +53,7 @@ public class Curso {
     }
 
     @Override
-    public String toString(){
-        return nome + " " + cargaHoraria + " " + professor + " " + alunos ;
+    public String toString() {
+        return "{" + nome + " " + cargaHoraria + " " + professor + " " + alunos + "}";
     }
 }
